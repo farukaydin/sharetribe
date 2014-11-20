@@ -39,4 +39,10 @@ describe Comment do
     @comment.should_not be_valid
   end
 
+  it "try hound" do
+    @comment.content = "a" * 5001
+        @comment.should_not be_valid
+      
+  end
+
 end
